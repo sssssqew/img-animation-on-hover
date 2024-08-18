@@ -15,7 +15,7 @@ links.forEach((link, idx) => {
         link.style.zIndex = '2'
     })
 
-    link.addEventListener('mouseleave', () => {
+    link.addEventListener('mouseleave', (e) => {
         link.children[1].style.opacity = 0
         link.children[1].style.transform = `translate(${-e.clientX}px, -300px)` // 호버 비활성화시 사진이 왼쪽 위 방향으로 빠르게 움직이면서 사라지는 효과
         linkImages[idx].style.transform = `scale(0.8)`
